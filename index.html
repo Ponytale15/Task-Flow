@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow — Daily Task Manager</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+ 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo-icon">✓</div>
+  <h1>TaskFlow</h1>
+  <span id="today-date"></span>
+</header>
+
+<main>
+
+  <!-- Add Task Section -->
+  <div class="add-card">
+    <label for="task-input">New Task</label>
+
+    <div class="add-row">
+      <input
+        id="task-input"
+        type="text"
+        placeholder="What needs to get done?"
+        maxlength="200"
+        autocomplete="off">
+
+      <button class="btn btn-primary" id="add-btn">
+        Add Task
+      </button>
+    </div>
+  </div>
+
+  
+  <div class="lists-grid">
+
+    <!-- Pending Tasks -->
+    <div class="list-card">
+
+      <div class="list-header list-header-pending">
+        <span class="list-title">⏳ Pending</span>
+
+        <span class="count-badge badge-pending" id="pending-count">
+          0 pending
+        </span>
+      </div>
+
+      <ul class="task-list" id="pending-list">
+
+        <li class="empty-state" id="pending-empty">
+          <div class="empty-icon">📋</div>
+          <p>No pending tasks — add one above!</p>
+        </li>
+
+      </ul>
+
+    </div>
+
+    
+    <div class="list-card">
+
+      <div class="list-header list-header-done">
+        <span class="list-title">✅ Completed</span>
+
+        <span class="count-badge badge-done" id="done-count">
+          0 completed
+        </span>
+      </div>
+
+      <ul class="task-list" id="done-list">
+
+        <li class="empty-state" id="done-empty">
+          <div class="empty-icon">🎉</div>
+          <p>Completed tasks will appear here.</p>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
